@@ -1,0 +1,93 @@
+Endpoints Example
+#GET
+    Request:
+        http://localhost:9191/demoObject
+    Result:
+        [
+            {
+                "id": 1,
+                "name": "init test insert"
+            },
+            {
+                "id": 9,
+                "name": "test update retry retry"
+            },
+            {
+                "id": 10,
+                "name": "test insert"
+            },
+            {
+                "id": 11,
+                "name": "test insert"
+            },
+            {
+                "id": 12,
+                "name": "test insert"
+            },
+            {
+                "id": 13,
+                "name": "test insert"
+            },
+            {
+                "id": 14,
+                "name": "test insert"
+            },
+            {
+                "id": 15,
+                "name": "test insert"
+            },
+            {
+                "id": 17,
+                "name": "test insert"
+            }
+        ]
+    Request:
+        http://localhost:9191/demoObject/1
+    Result:
+        {
+            "id": 1,
+            "name": "init test insert"
+        }
+    Request:
+        http://localhost:9191/demoObject/search/init test insert
+    Result:
+        [
+            {
+                "id": 1,
+                "name": "init test insert"
+            }
+        ]
+#POST
+    Request:
+        http://localhost:9191/demoObject
+
+        [
+            {
+                "name": "test insert"
+            }
+        ]	
+    Result:
+        [
+            {
+                "id": 17,
+                "name": "test insert"
+            }
+        ]
+#PUT
+    Request:
+        http://localhost:9191/demoObject
+
+        {
+                "id": 9,
+                "name": "test update retry retry"
+        }
+    Result:
+        {
+            "id": 9,
+            "name": "test update retry retry"
+        }
+#DELETE
+    Request:
+        http://localhost:9191/demoObject/16
+    Result:
+        No content

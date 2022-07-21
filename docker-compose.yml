@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  database:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'demodb'   
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'pass'      
+      MYSQL_ROOT_PASSWORD: 'rootpass'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - './.mysql-data/db:/var/lib/mysql'
