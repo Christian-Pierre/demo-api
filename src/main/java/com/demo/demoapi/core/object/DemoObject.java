@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class DemoObject {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="do_id")
     private int id;
 

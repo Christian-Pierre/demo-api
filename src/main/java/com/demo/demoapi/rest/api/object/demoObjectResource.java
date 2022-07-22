@@ -42,7 +42,7 @@ public class demoObjectResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<DemoObject>> getEspecificDemoObject(@PathVariable int id){
+    public ResponseEntity<Optional<DemoObject>> getEspecificDemoObject(@PathVariable Integer id){
         return new ResponseEntity<Optional<DemoObject>>(service.getDemoObjectById(id), HttpStatus.OK);
     }
 
@@ -63,7 +63,7 @@ public class demoObjectResource {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteDemoObject(@PathVariable int id){
+    public ResponseEntity<Void> deleteDemoObject(@PathVariable Integer id){
         service.deleteDemoObject(id);
         return new ResponseEntity<Void>( 
             HttpStatus.OK
