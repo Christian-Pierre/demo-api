@@ -16,14 +16,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.demoapi.core.object.DemoObject;
+import com.demo.demoapi.core.object.DemoObjectRepository;
 import com.demo.demoapi.core.object.DemoObjectService;
 
 @RestController
 @RequestMapping("/demoObject")
 public class demoObjectResource {
 
-    @Autowired
-    private DemoObjectService service;
+    private final DemoObjectService service;
+
+    public demoObjectResource(DemoObjectService demoObjectService){
+        this.service = demoObjectService;
+    }
     
     @PostMapping
     public ResponseEntity<List<DemoObject>> addDemoObjects(@RequestBody List<DemoObject> demoObjects){

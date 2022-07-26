@@ -3,17 +3,15 @@ package com.demo.demoapi.core.object;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DemoObjectService {
+
+    @Autowired
+    private DemoObjectRepository repository;
     
-    final DemoObjectRepository repository;
-
-    public DemoObjectService(DemoObjectRepository demoObjectRepository){
-        this.repository = demoObjectRepository;
-    }
-
     public List<DemoObject> saveDemoObject(List<DemoObject> demoObjects){
         return repository.saveAll(demoObjects);
     }
