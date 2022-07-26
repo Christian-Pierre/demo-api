@@ -3,8 +3,9 @@
 <p>This project is API REST pattern demonstration.<p>
 <p>Ambient Setup:</p>
 <ul>
-  <li>Java 11.0.15</li>
-  <li>Apache Maven 3.6.3</li>
+  <li>Java 8</li>
+  <li>Apache Maven 3</li>
+  <li>Spring Boot 2.7.2</li>
   <li>Mysql 5.7</li>
   <li>Docker 20.10.17</li>
   <li>OS: Windows 11 & WSL2 w/ Ubuntu</li>
