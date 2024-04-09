@@ -1,4 +1,4 @@
-package com.demo.demoapi.core.object;
+package com.demo.demoapi.core.model;
 
 import javax.persistence.*;
 
