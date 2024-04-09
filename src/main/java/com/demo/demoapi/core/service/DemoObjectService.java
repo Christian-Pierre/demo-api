@@ -1,10 +1,13 @@
-package com.demo.demoapi.core.object;
+package com.demo.demoapi.core.service;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.demo.demoapi.core.model.DemoObject;
+import com.demo.demoapi.core.repository.DemoObjectRepository;
 
 @Service
 public class DemoObjectService {
